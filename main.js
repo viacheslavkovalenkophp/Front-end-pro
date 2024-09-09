@@ -7,4 +7,3 @@ console.log(cobbler);
 console.log(typeof(age));
 console.log(typeof(name));
 console.log(typeof(cobbler));
-console.log()
