@@ -1,0 +1,46 @@
+Index: index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n  <title>Document</title>\r\n</head>\r\n<body>\r\n\r\n\r\n    <script src=\"main.js\"></script>\r\n</body>\r\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/index.html b/index.html
+--- a/index.html	(revision 4c925b38072171885d103df5357bd877ecea7a98)
++++ b/index.html	(date 1725888858529)
+@@ -1,13 +1,0 @@
+-<!DOCTYPE html>
+-<html lang="en">
+-<head>
+-  <meta charset="UTF-8">
+-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-  <title>Document</title>
+-</head>
+-<body>
+-
+-
+-    <script src="main.js"></script>
+-</body>
+-</html>
+\ No newline at end of file
+Index: main.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>let age = 39;\r\nlet name = \"Viacheslav\";\r\nlet cobbler = true;\r\nconsole.log(age);\r\nconsole.log(name);\r\nconsole.log(cobbler);\r\nconsole.log(typeof(age));\r\nconsole.log(typeof(name));\r\nconsole.log(typeof(cobbler));
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main.js b/main.js
+--- a/main.js	(revision 4c925b38072171885d103df5357bd877ecea7a98)
++++ b/main.js	(date 1725888858405)
+@@ -1,9 +1,0 @@
+-let age = 39;
+-let name = "Viacheslav";
+-let cobbler = true;
+-console.log(age);
+-console.log(name);
+-console.log(cobbler);
+-console.log(typeof(age));
+-console.log(typeof(name));
+-console.log(typeof(cobbler));
+\ No newline at end of file
