@@ -1,12 +1,6 @@
-let age = 39;
-let name = "Viacheslav";
-let cobbler = true;
-console.log(age);
-console.log(name);
-console.log(cobbler);
-console.log(typeof(age));
-console.log(typeof(name));
-console.log(typeof(cobbler));
+let money = +prompt("Скількі долярів Ви хочете поміняти?");
 
+let cash = money * 26;
 
+alert ("Це буде коштувати " + cash + " гривень");
 
