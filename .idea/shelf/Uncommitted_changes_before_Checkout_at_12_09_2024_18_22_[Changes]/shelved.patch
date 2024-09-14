@@ -1,0 +1,45 @@
+Index: main.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>let age = 39;\r\nlet name = \"Viacheslav\";\r\nlet cobbler = true;\r\nconsole.log(age);\r\nconsole.log(name);\r\nconsole.log(cobbler);\r\nconsole.log(typeof(age));\r\nconsole.log(typeof(name));\r\nconsole.log(typeof(cobbler));
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main.js b/main.js
+--- a/main.js	(revision 4c925b38072171885d103df5357bd877ecea7a98)
++++ b/main.js	(date 1726079732058)
+@@ -1,9 +1,23 @@
+-let age = 39;
+-let name = "Viacheslav";
+-let cobbler = true;
+-console.log(age);
+-console.log(name);
+-console.log(cobbler);
+-console.log(typeof(age));
+-console.log(typeof(name));
+-console.log(typeof(cobbler));
+\ No newline at end of file
++let age = prompt ("Enter your year of birth");
++console.log(2024 - age);
++
++let city = prompt ("enter your town, city");
++let kyivcity = city;
++let londoncity = city;
++let washington = city;
++
++
++if (kyivcity === "Київ") {
++    console.log("Ви живете у столиці України");
++} else if(londoncity === "Лондон") {
++    console.log("Ви живете у столиці Англії");
++} else  if(washington === "Вашингтон") {
++    console.log("Ви живете у столиці сполучених штатів");
++} else {
++    console.log("Шкода що Ви не живете у Київі, Лондоні чи Вашингтоні")
++}
++
++
++
++
++let sport = prompt ("Enter your favorite kind of sport");
+\ No newline at end of file
