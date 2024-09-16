@@ -20,7 +20,7 @@ let nam = Math.sqrt(myNumber);
 let sam = Math.floor(nam);
 
 
-for(let i = 1; i <= userNumber; i++){
+for(let i = 1; i <= myNumber; i++){
     if(myNumber === sam * sam){
         console.log("це число не є простим")
     } else {
