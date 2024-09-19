@@ -8,3 +8,12 @@ else console.log("ERROR");
 
 alert("arithmeticmean is " + result);
 
+
+let firstNumber = +prompt("Enter tour first number");
+let secondNumber = +prompt("Enter tour second number");
+let resultIs = ((firstNumber + secondNumber) / 2);
+function add(firstNumber, secondNumber) {
+    console.log((firstNumber + secondNumber) / 2);
+}
+add(firstNumber, secondNumber);
+alert(resultIs);
