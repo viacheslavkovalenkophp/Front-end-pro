@@ -1,12 +1,10 @@
-let age = 39;
-let name = "Viacheslav";
-let cobbler = true;
-console.log(age);
-console.log(name);
-console.log(cobbler);
-console.log(typeof(age));
-console.log(typeof(name));
-console.log(typeof(cobbler));
+let numberOne = +prompt("Enter tour first number");
+let numberTwo = +prompt("Enter your second number");
+let result = (numberOne + numberTwo) / 2;
 
+if (numberOne + numberTwo === numberTwo + numberOne)
+    console.log(result);
+else console.log("ERROR");
 
+alert("arithmeticmean is " + result);
 
