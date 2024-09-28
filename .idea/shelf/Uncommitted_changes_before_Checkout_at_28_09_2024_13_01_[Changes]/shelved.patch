@@ -1,0 +1,105 @@
+Index: main.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>let age = 39;\r\nlet name = \"Viacheslav\";\r\nlet cobbler = true;\r\nconsole.log(age);\r\nconsole.log(name);\r\nconsole.log(cobbler);\r\nconsole.log(typeof(age));\r\nconsole.log(typeof(name));\r\nconsole.log(typeof(cobbler));\r\n\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main.js b/main.js
+--- a/main.js	(revision b1f7c66ce419b422da66898fa720249fbf5a8f9e)
++++ b/main.js	(date 1727521258374)
+@@ -1,12 +1,0 @@
+-let age = 39;
+-let name = "Viacheslav";
+-let cobbler = true;
+-console.log(age);
+-console.log(name);
+-console.log(cobbler);
+-console.log(typeof(age));
+-console.log(typeof(name));
+-console.log(typeof(cobbler));
+-
+-
+-
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"1e9f99e3-d659-4b2a-810c-bef303378461\" name=\"Changes\" comment=\"\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"homework-2\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\"\r\n  }\r\n}]]></component>\r\n  <component name=\"TaskManager\">\r\n    <servers />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision b1f7c66ce419b422da66898fa720249fbf5a8f9e)
++++ b/.idea/workspace.xml	(date 1727521162691)
+@@ -4,7 +4,10 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="1e9f99e3-d659-4b2a-810c-bef303378461" name="Changes" comment="" />
++    <list default="true" id="1e9f99e3-d659-4b2a-810c-bef303378461" name="Changes" comment="">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -13,18 +16,56 @@
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="homework-2" />
++        <entry key="$PROJECT_DIR$" value="homework-6.2" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
++  <component name="ProjectColorInfo">{
++  &quot;customColor&quot;: &quot;&quot;,
++  &quot;associatedIndex&quot;: 0
++}</component>
++  <component name="ProjectId" id="2mKxJ7hoxTSnENZlsjn88zmOLsF" />
+   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
++  <component name="ProjectViewState">
++    <option name="hideEmptyMiddlePackages" value="true" />
++    <option name="showLibraryContents" value="true" />
++  </component>
+   <component name="PropertiesComponent"><![CDATA[{
+   "keyToString": {
+-    "node.js.selected.package.tslint": "(autodetect)"
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "git-widget-placeholder": "homework-6.1",
++    "node.js.detected.package.eslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "nodejs_package_manager_path": "npm",
++    "vue.rearranger.settings.migration": "true"
+   }
+ }]]></component>
++  <component name="SharedIndexes">
++    <attachedChunks>
++      <set>
++        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-WS-242.21829.149" />
++      </set>
++    </attachedChunks>
++  </component>
++  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
++    <task active="true" id="Default" summary="Default task">
++      <changelist id="1e9f99e3-d659-4b2a-810c-bef303378461" name="Changes" comment="" />
++      <created>1726839002373</created>
++      <option name="number" value="Default" />
++      <option name="presentableId" value="Default" />
++      <updated>1726839002373</updated>
++      <workItem from="1726839003792" duration="3629000" />
++      <workItem from="1727275202381" duration="2994000" />
++      <workItem from="1727332771193" duration="13873000" />
++      <workItem from="1727424525006" duration="597000" />
++      <workItem from="1727519484333" duration="1663000" />
++    </task>
+     <servers />
+   </component>
++  <component name="TypeScriptGeneratedFilesManager">
++    <option name="version" value="3" />
++  </component>
+ </project>
+\ No newline at end of file
