@@ -1,12 +1,18 @@
-let age = 39;
-let name = "Viacheslav";
-let cobbler = true;
-console.log(age);
-console.log(name);
-console.log(cobbler);
-console.log(typeof(age));
-console.log(typeof(name));
-console.log(typeof(cobbler));
+let str = ["hello world"];
+let arr = ['l', 'd'];
 
+let strr = str.join("");
 
+function eraseFromStr(strr, arr) {
+    let result = "";
 
+    for (let i = 0; i < strr.length; i++) {
+        if (!arr.includes(strr[i])) {
+            result += strr[i];
+        }
+    }
+
+    return result;
+}
+strr = eraseFromStr(strr, arr);
+console.log(strr);
