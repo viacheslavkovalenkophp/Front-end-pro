@@ -1,12 +1,16 @@
-let age = 39;
-let name = "Viacheslav";
-let cobbler = true;
-console.log(age);
-console.log(name);
-console.log(cobbler);
-console.log(typeof(age));
-console.log(typeof(name));
-console.log(typeof(cobbler));
+function createSum () {
+    let sum = 0;
+    return function (num) {
+        return sum = sum + num  ;
 
+    }
+
+}
+
+const sum = createSum();
+
+console.log(sum(3));
+console.log(sum(3));
+console.log(sum(11));
 
 
