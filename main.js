@@ -1,16 +1,6 @@
-function createSum () {
-    let sum = 0;
-    return function (num) {
-        return sum = sum + num  ;
-
+function multiNumbers (first) {
+    return function (second) {
+        return first * second;
     }
-
 }
-
-const sum = createSum();
-
-console.log(sum(3));
-console.log(sum(3));
-console.log(sum(11));
-
-
+console.log(multiNumbers(5)(2));
