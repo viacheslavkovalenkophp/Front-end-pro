@@ -1,0 +1,233 @@
+Index: main.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>let str = [\"hello world\"];\r\nlet arr = ['l', 'd'];\r\n\r\nlet strr = str.join(\"\");\r\n\r\nfunction eraseFromStr(strr, arr) {\r\n    let result = \"\";\r\n\r\n    for (let i = 0; i < strr.length; i++) {\r\n        if (!arr.includes(strr[i])) {\r\n            result += strr[i];\r\n        }\r\n    }\r\n\r\n    return result;\r\n}\r\nstrr = eraseFromStr(strr, arr);\r\nconsole.log(strr);\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main.js b/main.js
+--- a/main.js	(revision 406df4a8e730178853bb4f0d87fb20b6135a729d)
++++ b/main.js	(date 1727977292081)
+@@ -1,18 +1,95 @@
+-let str = ["hello world"];
+-let arr = ['l', 'd'];
++let number1 = +prompt("enter number1");
++let number2 = +prompt("enter number2");
++
++function processArray (arr, clb){
++    for(let i = 0 ; i < arr.length; i ++){
++        arr[i] = clb(arr[i]);
++    }
++    return arr;
++}
++
++function multiplus(num) {
++    return num * number1 + number2;
++}
++
++let numbers = [2, 22, 222];
++console.log(processArray(numbers, multiplus));
++
++
++(function(){
++    console.log(number1 + number2);
++})();
++
++(function(name){
++    let klo = "Alex"
++    console.log(name, klo);
++})("Name");
++
++let A = +prompt("numbers please");
++let B = +prompt("numbers please");
++let C = +prompt("numbers please");
++
++function curryAdd (A) {
++    return function (B) {
++        return function (C) {
++            return A * B * C ;
++        }
++    }
++}
++
++console.log(curryAdd(A)(B)(C));
++
++
++function multiPlay(first) {
++    return function (second) {
++        return first * second ;
++    }
++}
++
++const double = multiPlay(2);
++console.log(double(5));
++console.log(multiPlay(2)(4));
++
++
++function outerFunction () {
++    let variable = "Outer variable" ;
++
++    function innerFunction () {
++        console.log(variable) ;
++    }
++    return innerFunction;
++}
++
++const closure = outerFunction () ;
++
++closure();closure();closure();closure();
+ 
+-let strr = str.join("");
+ 
+-function eraseFromStr(strr, arr) {
+-    let result = "";
++function makeCounter () {
+ 
+-    for (let i = 0; i < strr.length; i++) {
+-        if (!arr.includes(strr[i])) {
+-            result += strr[i];
+-        }
+-    }
++    let myCounter = 0;
++    return function () {
++        myCounter++;
++        console.log(myCounter);
++    }
++}
+ 
+-    return result;
++const counter1 = makeCounter();
++const counter2 = makeCounter();
++const counter3 = makeCounter();
++counter1();
++counter2();
++counter2();
++counter3();
++counter3();
++counter3();
++
++
++const addArrow = (first, second) => {
++    return first + second;
+ }
+-strr = eraseFromStr(strr, arr);
+-console.log(strr);
++
++
++console.log(addArrow(4, 6));
++
++let oiu =`kjkjod$ {hdvh} vdhv $ {gd}`
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"1e9f99e3-d659-4b2a-810c-bef303378461\" name=\"Changes\" comment=\"\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"homework-6.3\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;\r\n  }\r\n}</component>\r\n  <component name=\"TaskManager\">\r\n    <servers />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 406df4a8e730178853bb4f0d87fb20b6135a729d)
++++ b/.idea/workspace.xml	(date 1727977678789)
+@@ -4,7 +4,11 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="1e9f99e3-d659-4b2a-810c-bef303378461" name="Changes" comment="" />
++    <list default="true" id="1e9f99e3-d659-4b2a-810c-bef303378461" name="Changes" comment="">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -18,13 +22,65 @@
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
++  <component name="ProjectColorInfo">{
++  &quot;associatedIndex&quot;: 2
++}</component>
++  <component name="ProjectId" id="2mhepNcUhYV0kPJkaVyx5qeAmTx" />
+   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
++  <component name="ProjectViewState">
++    <option name="hideEmptyMiddlePackages" value="true" />
++    <option name="showLibraryContents" value="true" />
++  </component>
+   <component name="PropertiesComponent">{
+   &quot;keyToString&quot;: {
+-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;homework-6.1&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   }
+ }</component>
++  <component name="SharedIndexes">
++    <attachedChunks>
++      <set>
++        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-WS-242.23339.15" />
++      </set>
++    </attachedChunks>
++  </component>
++  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
++    <task active="true" id="Default" summary="Default task">
++      <changelist id="1e9f99e3-d659-4b2a-810c-bef303378461" name="Changes" comment="" />
++      <created>1727533428990</created>
++      <option name="number" value="Default" />
++      <option name="presentableId" value="Default" />
++      <updated>1727533428990</updated>
++      <workItem from="1727533430399" duration="635000" />
++      <workItem from="1727704625881" duration="601000" />
++      <workItem from="1727705875497" duration="11468000" />
++      <workItem from="1727719251626" duration="21000" />
++      <workItem from="1727792952413" duration="10997000" />
++      <workItem from="1727877995226" duration="11437000" />
++      <workItem from="1727894644911" duration="597000" />
++      <workItem from="1727958365529" duration="6776000" />
++    </task>
+     <servers />
+   </component>
++  <component name="TypeScriptGeneratedFilesManager">
++    <option name="version" value="3" />
++  </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State />
++          </value>
++        </entry>
++      </map>
++    </option>
++  </component>
+ </project>
+\ No newline at end of file
+Index: index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <title>$Title$</title>\r\n</head>\r\n<body>\r\n<script src=\"main.js\"></script>\r\n</body>\r\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/index.html b/index.html
+--- a/index.html	(revision 406df4a8e730178853bb4f0d87fb20b6135a729d)
++++ b/index.html	(date 1727705219773)
+@@ -1,8 +1,9 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+-  <meta charset="UTF-8">
+-  <title>$Title$</title>
++    <meta charset="UTF-8">
++    <meta name="viewport" content="width=device-width, initial-scale=1.0">
++    <title>Document</title>
+ </head>
+ <body>
+ <script src="main.js"></script>

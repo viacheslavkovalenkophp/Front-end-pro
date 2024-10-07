@@ -1,12 +1,17 @@
-let age = 39;
-let name = "Viacheslav";
-let cobbler = true;
-console.log(age);
-console.log(name);
-console.log(cobbler);
-console.log(typeof(age));
-console.log(typeof(name));
-console.log(typeof(cobbler));
+let ledder = {
+    step: 0,
+    up: function () {
+        this.step++;
+    },
+    down: function () {
+        this.step--;
+    },
+    showStep: function () {
+        console.log(this.step);
+}
+};
 
-
-
+ledder.up();
+ledder.up();
+ledder.down();
+ledder.showStep();
