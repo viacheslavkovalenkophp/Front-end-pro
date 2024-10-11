@@ -1,0 +1,44 @@
+Index: index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <title>$Title$</title>\r\n</head>\r\n<body>\r\n<script src=\"main.js\"></script>\r\n</body>\r\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/index.html b/index.html
+--- a/index.html	(revision c4333c2ae021fa62a7d48d02da860b41adcffcfd)
++++ b/index.html	(date 1728411393341)
+@@ -1,10 +1,13 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+-  <meta charset="UTF-8">
+-  <title>$Title$</title>
++    <meta charset="UTF-8">
++    <meta name="viewport" content="width=device-width, initial-scale=1.0">
++    <link rel="stylesheet" href="./style.css">
++    <title>Document</title>
+ </head>
+-<body>
++<body class="hold">
++<input type="button" value="Enter some number pleace">
+ <script src="main.js"></script>
+ </body>
+ </html>
+\ No newline at end of file
+Index: style.css
+===================================================================
+diff --git a/style.css b/style.css
+new file mode 100644
+--- /dev/null	(date 1728411344914)
++++ b/style.css	(date 1728411344914)
+@@ -0,0 +1,8 @@
++.hold {
++    justify-content: center;
++}
++
++.hold {
++    background-color: blueviolet;
++
++}
+\ No newline at end of file
