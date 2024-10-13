@@ -21,6 +21,6 @@ function collectSalary (company) {
 
     return salary;
 }
-let salaries = collectSalary(company);
-let allSalaries = salaries.reduce((a,b) => a + b, 0);
+let salary = collectSalary(company);
+let allSalaries = salary.reduce((a,b) => a + b, 0);
 console.log(allSalaries);
