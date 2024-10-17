@@ -1,5 +1,8 @@
 let enterNumber = prompt ("Enter name witch you wanna see");
-
+let name = prompt ("Enter name to add");
+let phone = prompt ("Enter phone to add");
+let adress = prompt ("Enter adress to add");
+let mail = prompt ("Enter mail to add");
 const contactData = {
     contactList: [
         {
@@ -33,7 +36,7 @@ const contactData = {
             email: "Typan@ty"
         }
     ],
-    getContactData () {
+    getContactData: function () {
         let found = false;
         for(let contact of this.contactList) {
             if(enterNumber === contact.contactName) {
@@ -46,8 +49,17 @@ const contactData = {
         }   if (!found) {
             console.log("Немає таких данних");
     }
-}
+},
+    addContact: function (contactName, phoneNumber, address, email) {
+        this.contactList.push({contactName, phoneNumber, address, email});
+        console.log(`Додано нові данні контакту
+            Ім'я ${contactName},
+            Номер телефону ${phoneNumber},
+            Країна проживання ${address},
+            Едектронна пошта ${email}`);
+    }
 }
 contactData.getContactData ();
+contactData.addContact (name, phone, adress, mail);
 
 
