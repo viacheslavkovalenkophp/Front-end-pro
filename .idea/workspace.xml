@@ -19,6 +19,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="Dockerfile" />
       </list>
     </option>
   </component>
@@ -42,7 +43,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "homework-11.2",
+    "git-widget-placeholder": "homework-11.3",
+    "last_opened_file_path": "C:/Users/АSUS/Desktop/Front-end-pro/image",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -53,6 +55,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\АSUS\Desktop\Front-end-pro\image" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -75,7 +82,9 @@
       <workItem from="1729443432940" duration="3453000" />
       <workItem from="1729517468036" duration="10499000" />
       <workItem from="1729603592664" duration="3530000" />
-      <workItem from="1729620346389" duration="4355000" />
+      <workItem from="1729620346389" duration="4586000" />
+      <workItem from="1729624998609" duration="26000" />
+      <workItem from="1729686706058" duration="5710000" />
     </task>
     <servers />
   </component>
