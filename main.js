@@ -1,12 +1,13 @@
-let age = 39;
-let name = "Viacheslav";
-let cobbler = true;
-console.log(age);
-console.log(name);
-console.log(cobbler);
-console.log(typeof(age));
-console.log(typeof(name));
-console.log(typeof(cobbler));
 
 
+let myPrompt = "";
+const promptEnter = document.querySelector('#promptEnter');
+const goToUrl = document.querySelector('#goToUrl')
+promptEnter.addEventListener('click', () => {
+     myPrompt = prompt ('Enter URL please');
+});
+myPrompt = "";
 
+goToUrl.addEventListener('click', () => {
+    location.href = `http://${myPrompt}`;
+});
