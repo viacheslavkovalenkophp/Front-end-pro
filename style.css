@@ -1,3 +1,11 @@
-.red {
-    background-color: red;
+.line {
+    text-decoration: line-through red;
+}
+
+.ul:hover {
+    cursor: pointer;
+}
+
+.point {
+    position: fixed; top: 10px; right: 10px;
 }

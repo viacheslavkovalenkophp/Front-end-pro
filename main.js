@@ -1,21 +1,22 @@
-const body = document.querySelector('#body');
-body.addEventListener('mouseup', (event) => {
-    console.log(event.target);
-    console,log
+const myList = document.querySelector('#myList');
+const button = document.querySelector('#button');
+const input = document.querySelector('#input');
+
+button.addEventListener('click', () => {
+    const newLi = document.createElement('li');
+    newLi.textContent = input.value;
+    myList.appendChild(newLi);
+    newLi.addEventListener('click', () => {
+        newLi.classList.add('pointer');
+        newLi.classList.toggle("line");
+
+    });
+    input.value = "";
+
+    const btnDelete = document.createElement('Button');
+    btnDelete.textContent = 'Delete';
+    newLi.appendChild(btnDelete);
+    btnDelete.addEventListener('click', ()=> {
+        myList.removeChild(newLi);
+    })
 });
-
-const btn1 = document.createElement('button');
-btn1.textContent = 'button1';
-btn1.id = 'btn1';
-btn1.classList.add('red');
-body.appendChild(btn1);
-
-const btn2 = document.createElement('button');
-btn2.textContent = 'button2';
-btn2.id = 'btn2';
-body.appendChild(btn2);
-
-const btn3 = document.createElement('button');
-btn3.textContent = 'button3';
-btn3.id = 'btn3';
-body.appendChild(btn3);
