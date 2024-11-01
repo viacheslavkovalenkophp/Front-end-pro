@@ -1,10 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./reset.css"/>
+  <link rel="stylesheet" href="./style.css" />
+  <title>Document</title>
 </head>
 <body>
+<header>
+  <h1 class="header_content">Перша форма !</h1>
+</header>
+<main>
+  <div>
+    <h2 class="main_content">Будьласка заповніть форму !</h2>
+    <form class="myForm" id="orderForm">
+      <label class="labelUserName label" for="userName">Ім'я</label>
+      <input class="input" type="text" name="name" id="userName">
+      <span class="error" id="userNameError"></span>
+      <span class="error" id="userNameErrorLat"></span>
+
+      <label class="labelUserComment label" for="userComment">Коментар (За бажаням)</label>
+      <textarea class="textarea" name="comment" id="userComment" cols="30" rows="10"></textarea>
+      <span class="error" id="userCommentError"></span>
+
+      <label class="labelUserPhoneNumber label" for="userPhoneNumber">Номер Телефону (За наявеості)</label>
+      <input class="input" type="text" name="phoneNumber" id="userPhoneNumber">
+      <span class="error" id="userPhoneNumberError"></span>
+
+      <label class="labelUserEmail label" for="userEmail">Електронна Пошта (За наявності)</label>
+      <input class="input" type="text" name="email" id="userEmail">
+      <span class="error" id="userEmailError"></span>
+
+      <button class="userButton" type="submit">Відправити</button>
+    </form>
+  </div>
+
+</main>
 <script src="main.js"></script>
+
 </body>
 </html>

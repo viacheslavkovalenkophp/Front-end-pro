@@ -1,0 +1,54 @@
+
+
+.myForm {
+    display: flex;
+    flex-direction: column;
+    max-width: 450px;
+    background-color: yellowgreen;
+
+}
+
+.textarea {
+    background-color: greenyellow;
+    color: red;
+    border: 2px groove rgb(20, 45, 173);
+}
+
+.error {
+    color: red;
+    background-color: black;
+    font-size: 22px;
+}
+
+.label {
+    background-color: darkblue;
+    color: aqua;
+}
+
+.input {
+    background-color: darkviolet;
+    color: white;
+}
+
+.header_content {
+    font-size: 30px;
+    color: darkorange;
+    background-color: aqua;
+    max-width: 450px;
+}
+
+.main_content {
+    font-size: 25px;
+    color: red;
+    background-color: darkgreen;
+    max-width: 450px;
+}
+
+.userButton {
+    font-size: 18px;
+    background-color: indigo;
+    color: lawngreen;
+    border: 5px groove coral;
+    border-radius: 5px;
+}
+
