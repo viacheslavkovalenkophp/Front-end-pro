@@ -1,101 +1,82 @@
-/*fetch('http://jsonplaceholder.typicode.com/todos').then((response) => {
-    return response.json();
-}).then((data) => {
-    console.log(data);
-}).catch((err) => {
-    console.log(err);
-});
+const apiUrl = "https://jsonplaceholder.typicode.com"
+const todoList = document.querySelector('#post-list');
+const addPost = document.querySelector('#form-post');
 
-
-setInterval(() => {
-    fetch('http://jsonplaceholder.typicode.com/todos').then((response) => {
-    return response.json();
-}).then((data) => {
-    console.log(data);
-}).catch((err) => {
-    console.log(err);
-});},20000);*/
-
-
-/*const xhr = new XMLHttpRequest();
-xhr.open('GET','http://jsonplaceholder.typicode.com/todos', true);
-xhr.onreadystatechange = function () {
-    if (xhr.status === 200) {
-        const response = JSON.parse(xhr.responseText);
-        console.log (response);
-       // console.log (xhr.responseText);
-    }
-}
-xhr.send();*/
-
-/*let number = 2 ;
-let button = document.querySelector('#click');
-function multiplay () {
-    number *= 2 ;
-    console.log (number);
-    return number;
-}
-setInterval(multiplay, 1000);
-let numbers = 2 ;
-let buttons = document.querySelector('#click');
-function multiplays () {
-    numbers += 2 ;
-    console.log (numbers);
-    return numbers;
-}
-setInterval(multiplays, 1000);*/
-
-const apiUrl = "http://jsonplaceholder.typicode.com";
-const todoList = document.querySelector('#todo-list');
-const todoForm = document.querySelector('#todo-form');
-const addTodoInput = document.querySelector('#new-todo');
-
-const loadTodos = () => {
-    fetch(apiUrl+'/todos?_limit=15').then((response) => {
-        return response.json();
-    }).then((data) => {
-        console.log (data);
-        addTodosToDom (data);
-    }).catch((err) => {
-        console.log(err);
+function loadPosts () {
+    fetch (apiUrl + `/posts?_limit=10`)
+        .then(response => response.json ()
+        ).then((data) => {
+        todoList.innerHTML = "";
+        data.forEach(post => addPostsToDom(post));
+    }).catch(err => {
+        console.log (err);
     })
 }
-const addTodosToDom = (todos) => {
-    todoList.innerHTML = '';
-    todos.forEach((todo) => {
-    const li = document.createElement('li');
-    li.innerHTML = `
-    ${todo.title}
-        <button class="delete">Delete</button>
-    `;
-    todoList.appendChild(li);
+
+function addComments (postId) {
+    fetch (apiUrl + `/posts/${postId}/comments?_limit=2`)
+        .then((response) => response.json ()
+        ).then((data) => {
+        const postItem = document.querySelector(`[data-id='${postId}']`).parentElement;
+        const commentsDiv = document.createElement('div');
+        commentsDiv.classList.add('comments');
+
+        data.forEach(comment => {
+            const commentText = document.createElement('p');
+            commentText.innerHTML = `<strong>${comment.name}:</strong> ${comment.body}`;
+            commentsDiv.appendChild(commentText);
+        });
+
+        postItem.appendChild(commentsDiv);
+        const button = postItem.querySelector('.addcomments');
+        button.disabled = true;
+    }).catch(err => {
+        console.log (err);
     });
 }
 
-todoForm.addEventListener('submit', (event) => {
+function addPostsToDom (post) {
+    const li = document.createElement('li');
+    li.innerHTML = `${post.title} <button class="addcomments" data-id="${post.id}">Add Comments</button>`;
+    todoList.appendChild(li);
+}
+addPost.addEventListener('submit', function (event) {
     event.preventDefault();
 
-    const title = addTodoInput.value.trim();
-    if (title) {
-        fetch(apiUrl + "/todos", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                    title: title,
-                    completed: false
-                })
-        }).then((response) => {
-            console.log (response);
-        }).catch((err) => {
+    const title = document.querySelector('#title').value;
+    const body = document.querySelector('#body').value;
+
+    const newPost = {
+        title: title,
+        body: body,
+        userId: 1,
+    };
+
+    fetch(apiUrl + '/posts', {
+        method: 'POST',
+        headers: {
+            'Content-type': 'application/json'
+        },
+        body: JSON.stringify(newPost),
+    })
+        .then(response => response.json())
+        .then(post => {
+            addPostsToDom(post);
+            addPost.reset();
+        }).catch(err => {
             console.log(err);
-        })
-    }
+    });
+
+
+
 });
+todoList.addEventListener('click', function (event) {
+    if (event.target.classList.contains('addcomments')) {
+        const postId = event.target.getAttribute('data-id');
+        addComments(postId);
+    }
+})
 
-
-loadTodos ();
-
+loadPosts ();
 
 

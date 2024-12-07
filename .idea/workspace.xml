@@ -6,11 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="1e9f99e3-d659-4b2a-810c-bef303378461" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -34,6 +43,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;homework-20.1&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
@@ -44,7 +54,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-WS-243.21565.180" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-WS-243.22562.112" />
       </set>
     </attachedChunks>
   </component>
@@ -58,6 +68,16 @@
       <updated>1732779311192</updated>
       <workItem from="1732779317324" duration="17418000" />
       <workItem from="1732864284675" duration="7338000" />
+      <workItem from="1733046380933" duration="7796000" />
+      <workItem from="1733062054881" duration="1295000" />
+      <workItem from="1733159364514" duration="9077000" />
+      <workItem from="1733230354837" duration="6766000" />
+      <workItem from="1733326609263" duration="7418000" />
+      <workItem from="1733414916468" duration="409000" />
+      <workItem from="1733416030216" duration="8193000" />
+      <workItem from="1733579845917" duration="5160000" />
+      <workItem from="1733591929353" duration="89000" />
+      <workItem from="1733595004467" duration="5562000" />
     </task>
     <servers />
   </component>
