@@ -1,10 +1,22 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./reset.css" />
+  <link rel="stylesheet" href="./style.css" />
+  <title>JsonPlaceholder</title>
 </head>
 <body>
+<div class="container"><h1>ToDo List</h1>
+  <form id="form-post" class="container_form">
+    <input id="title" placeholder="Post Title"/>
+    <input id="body" placeholder="Post Body">
+    <button type="submit">Add Post</button>
+  </form>
+  <ul id="post-list"></ul>
+</div>
 <script src="main.js"></script>
 </body>
 </html>
