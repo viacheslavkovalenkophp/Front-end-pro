@@ -1,0 +1,238 @@
+Index: script.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import {add,p,m} from \"./mathFunctions.js\";\r\nimport {forest, dWLN} from \"./forest.js\";\r\nimport {logg} from \"./logger.js\";\r\nimport {adds} from \"./addingFunctions.js\";\r\nimport builder from \"./logger.js\";\r\nimport * as num from \"./lobby.js\";\r\nimport * as go from \"./logger.js\";\r\nadd();\r\nlogg();\r\nforest();\r\nadds(4,5,6,7);\r\nbuilder(1,2,3,5);\r\ndWLN(100,2);\r\np(10,10);\r\nm(200,50);\r\nnum.one(2,2);\r\nnum.two(2,2);\r\nnum.t(4,4);\r\nnum.f(6,8);\r\n\r\n\r\nconst start = go.API_URL;\r\nconsole.log(start);\r\n\r\n\r\n// Экспортируем переменную и функции\r\nimport * as numm from \"./lobby.js\";\r\n\r\n// Деструктурируем всё, включая переменные и разные функции\r\nconst { variable, arrowFunc, regularFunc, obj } = numm;\r\n\r\n// Используем переменную и функции\r\nconsole.log(variable);  // Выводит: 42\r\narrowFunc();            // Выводит: Arrow Function\r\nregularFunc();          // Выводит: Regular Function\r\nobj.methodFunc();       // Выводит: Method Function in Object\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/script.js b/script.js
+--- a/script.js	(revision 88e1fd1f22ee4ca6a610bfabf1c10e0d95ca93ae)
++++ b/script.js	(date 1735209895624)
+@@ -1,38 +1,5 @@
+-import {add,p,m} from "./mathFunctions.js";
+-import {forest, dWLN} from "./forest.js";
+-import {logg} from "./logger.js";
+-import {adds} from "./addingFunctions.js";
+-import builder from "./logger.js";
+-import * as num from "./lobby.js";
+-import * as go from "./logger.js";
+-add();
+-logg();
+-forest();
+-adds(4,5,6,7);
+-builder(1,2,3,5);
+-dWLN(100,2);
+-p(10,10);
+-m(200,50);
+-num.one(2,2);
+-num.two(2,2);
+-num.t(4,4);
+-num.f(6,8);
+-
+-
+-const start = go.API_URL;
+-console.log(start);
+-
++const todo = "Это я из todo"
+ 
+-// Экспортируем переменную и функции
+-import * as numm from "./lobby.js";
+-
+-// Деструктурируем всё, включая переменные и разные функции
+-const { variable, arrowFunc, regularFunc, obj } = numm;
+-
+-// Используем переменную и функции
+-console.log(variable);  // Выводит: 42
+-arrowFunc();            // Выводит: Arrow Function
+-regularFunc();          // Выводит: Regular Function
+-obj.methodFunc();       // Выводит: Method Function in Object
+-
+-
++const functions = (todo) => {
++    console.log(todo.title);
++}
+\ No newline at end of file
+Index: addingFunctions.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>function addsFunction(a,b,c,d) {\r\n    return a + b * c * d;\r\n}\r\n\r\nexport function adds (a,b,c,d) {\r\n    console.log(addsFunction(a,b,c,d));\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/addingFunctions.js b/addingFunctions.js
+--- a/addingFunctions.js	(revision 88e1fd1f22ee4ca6a610bfabf1c10e0d95ca93ae)
++++ b/addingFunctions.js	(date 1735205820061)
+@@ -1,7 +1,0 @@
+-function addsFunction(a,b,c,d) {
+-    return a + b * c * d;
+-}
+-
+-export function adds (a,b,c,d) {
+-    console.log(addsFunction(a,b,c,d));
+-}
+Index: forest.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>export function forest () {\r\n    console.log(\"Hello I`m from forest\");\r\n}\r\n\r\nfunction divideWithLongName(a,b) {\r\n    console.log(a / b)\r\n}\r\nexport {divideWithLongName as dWLN};\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/forest.js b/forest.js
+--- a/forest.js	(revision 88e1fd1f22ee4ca6a610bfabf1c10e0d95ca93ae)
++++ b/forest.js	(date 1735205832628)
+@@ -1,9 +1,0 @@
+-export function forest () {
+-    console.log("Hello I`m from forest");
+-}
+-
+-function divideWithLongName(a,b) {
+-    console.log(a / b)
+-}
+-export {divideWithLongName as dWLN};
+-
+Index: lobby.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>function one (a,b) {\r\n    console.log(a+b);\r\n}\r\n\r\nfunction two (a,b) {\r\n    console.log(a+b);\r\n}\r\n\r\nfunction three (a,b) {\r\n    console.log(a+b);\r\n}\r\n\r\nfunction four (a,b) {\r\n    console.log(a+b);\r\n}\r\n\r\nexport {one,two,three as t, four as f}\r\n\r\nexport const variable = 42;\r\n\r\nexport const arrowFunc = () => console.log(\"Arrow Function\");\r\nexport function regularFunc() {\r\n    console.log(\"Regular Function\");\r\n}\r\nexport const obj = {\r\n    methodFunc() {\r\n        console.log(\"Method Function in Object\");\r\n    },\r\n};\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lobby.js b/lobby.js
+--- a/lobby.js	(revision 88e1fd1f22ee4ca6a610bfabf1c10e0d95ca93ae)
++++ b/lobby.js	(date 1735205855382)
+@@ -1,29 +1,0 @@
+-function one (a,b) {
+-    console.log(a+b);
+-}
+-
+-function two (a,b) {
+-    console.log(a+b);
+-}
+-
+-function three (a,b) {
+-    console.log(a+b);
+-}
+-
+-function four (a,b) {
+-    console.log(a+b);
+-}
+-
+-export {one,two,three as t, four as f}
+-
+-export const variable = 42;
+-
+-export const arrowFunc = () => console.log("Arrow Function");
+-export function regularFunc() {
+-    console.log("Regular Function");
+-}
+-export const obj = {
+-    methodFunc() {
+-        console.log("Method Function in Object");
+-    },
+-};
+Index: logger.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>export default function builder (a,b,c,d) {\r\n    console.log(a + b + c + d);\r\n}\r\n\r\nexport function logg () {\r\n    console.log(\"I`m from logger\");\r\n}\r\n\r\nexport const API_URL = \"https://google.com\";
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/logger.js b/logger.js
+--- a/logger.js	(revision 88e1fd1f22ee4ca6a610bfabf1c10e0d95ca93ae)
++++ b/logger.js	(date 1735205865675)
+@@ -1,9 +1,0 @@
+-export default function builder (a,b,c,d) {
+-    console.log(a + b + c + d);
+-}
+-
+-export function logg () {
+-    console.log("I`m from logger");
+-}
+-
+-export const API_URL = "https://google.com";
+\ No newline at end of file
+Index: mathFunctions.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>export function add() {\r\n    console.log(34);\r\n}\r\n\r\nfunction plus (a,b) {\r\n    console.log(a+b);\r\n}\r\n\r\nfunction minus (a,b) {\r\n    console.log(a-b);\r\n}\r\n\r\nexport {\r\n    plus as p,\r\n    minus as m\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/mathFunctions.js b/mathFunctions.js
+--- a/mathFunctions.js	(revision 88e1fd1f22ee4ca6a610bfabf1c10e0d95ca93ae)
++++ b/mathFunctions.js	(date 1735205875117)
+@@ -1,16 +1,0 @@
+-export function add() {
+-    console.log(34);
+-}
+-
+-function plus (a,b) {
+-    console.log(a+b);
+-}
+-
+-function minus (a,b) {
+-    console.log(a-b);
+-}
+-
+-export {
+-    plus as p,
+-    minus as m
+-}
+\ No newline at end of file
+Index: index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <title>$Title$</title>\r\n</head>\r\n<body>\r\n<script src=\"script.js\" type=\"module\"></script>\r\n</body>\r\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/index.html b/index.html
+--- a/index.html	(revision 88e1fd1f22ee4ca6a610bfabf1c10e0d95ca93ae)
++++ b/index.html	(date 1735205801032)
+@@ -1,10 +1,0 @@
+-<!DOCTYPE html>
+-<html lang="en">
+-<head>
+-  <meta charset="UTF-8">
+-  <title>$Title$</title>
+-</head>
+-<body>
+-<script src="script.js" type="module"></script>
+-</body>
+-</html>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"1e9f99e3-d659-4b2a-810c-bef303378461\" name=\"Changes\" comment=\"\">\r\n      <change afterPath=\"$PROJECT_DIR$/new.js\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/addingFunctions.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/addingFunctions.js\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/script.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/script.js\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"JavaScript File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"homework-2\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 7\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2qXHtTV8xuTNGug8X4qVSf1L3xx\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;homework-22.1.1&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-WS-243.22562.222\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"1e9f99e3-d659-4b2a-810c-bef303378461\" name=\"Changes\" comment=\"\" />\r\n      <created>1734802221067</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1734802221067</updated>\r\n      <workItem from=\"1734802223863\" duration=\"2519000\" />\r\n      <workItem from=\"1734804788972\" duration=\"4324000\" />\r\n      <workItem from=\"1734854556846\" duration=\"22909000\" />\r\n      <workItem from=\"1734889384581\" duration=\"517000\" />\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 88e1fd1f22ee4ca6a610bfabf1c10e0d95ca93ae)
++++ b/.idea/workspace.xml	(date 1735243149300)
+@@ -5,9 +5,13 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="1e9f99e3-d659-4b2a-810c-bef303378461" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/new.js" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/addingFunctions.js" beforeDir="false" afterPath="$PROJECT_DIR$/addingFunctions.js" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/forest.js" beforeDir="false" afterPath="$PROJECT_DIR$/forest.js" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/lobby.js" beforeDir="false" afterPath="$PROJECT_DIR$/lobby.js" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/logger.js" beforeDir="false" afterPath="$PROJECT_DIR$/logger.js" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/mathFunctions.js" beforeDir="false" afterPath="$PROJECT_DIR$/mathFunctions.js" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+@@ -70,6 +74,9 @@
+       <workItem from="1734804788972" duration="4324000" />
+       <workItem from="1734854556846" duration="22909000" />
+       <workItem from="1734889384581" duration="517000" />
++      <workItem from="1735042064759" duration="7307000" />
++      <workItem from="1735123143509" duration="4406000" />
++      <workItem from="1735201617568" duration="4805000" />
+     </task>
+     <servers />
+   </component>
